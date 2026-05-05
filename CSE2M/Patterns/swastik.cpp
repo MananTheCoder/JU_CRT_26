@@ -1,9 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// do middle row, last row using general_row
-// see if 1 of x & y can be deduced further
-
 void middle_row(int n)
 {
     for (int i = 1; i < (2 * n); i++)
