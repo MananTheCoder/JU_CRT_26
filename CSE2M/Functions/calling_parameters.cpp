@@ -40,6 +40,7 @@ int main()
     int a, b;
     cin >> a >> b;
     int *ptr_a = &a, *ptr_b = &b;
+    cout << (*ptr_a) << "\t" << (*ptr_b) << "\n";
     swap_pointers(ptr_a, ptr_b); // calling
-    cout << a << "\t" << b << "\n";
+    cout << (*ptr_a) << "\t" << (*ptr_b) << "\n";
 }
