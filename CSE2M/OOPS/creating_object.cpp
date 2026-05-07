@@ -12,7 +12,7 @@ public:
 
     Animal()
     {
-        cout << "Default constructor called.\n";
+        // cout << "Default constructor called.\n";
         this->color = "";
     }
 
@@ -25,7 +25,7 @@ public:
 
     Animal(int a, string c, string n) : age(a), color(c), type(n)
     {
-        cout << "Parametrized constructor called.\n";
+        // cout << "Parametrized constructor called.\n";
     }
 
     Animal(Animal &obj)
@@ -39,7 +39,7 @@ public:
 
     ~Animal()
     {
-        cout << "Destructor called.\n";
+        // cout << "Destructor called.\n";
     }
 };
 
@@ -72,8 +72,17 @@ void playing_with_desctructors()
     cout << "Outside scope1.\n";
 }
 
+void object_creation()
+{
+    Animal tutu(7, "orangish", "turtle");
+    Animal *noori = new Animal(6, "brown", "Cat");
+    cout << &tutu << "\n";
+    cout << noori << "\n";
+}
+
 int main()
 {
     // understanding_objects();
-    playing_with_desctructors();
+    // playing_with_desctructors();
+    object_creation();
 }
