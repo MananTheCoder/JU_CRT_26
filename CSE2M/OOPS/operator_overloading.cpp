@@ -42,9 +42,18 @@ public:
     }
 };
 
+Complex input_complex()
+{
+    int real, imag;
+    cin >> real >> imag;
+    return Complex(real, imag);
+}
+
 void overload_plus()
 {
-    Complex c1(2, 4), c2(3, 5);
+    // Complex c1(2, 4), c2(3, 5);
+    Complex c1 = input_complex();
+    Complex c2 = input_complex();
     Complex c3 = c1 + c2;
     c3 = c1 - c2;
     c3.print();

@@ -22,9 +22,16 @@ public:
         ++(this->my_int);
         return *this;
     }
+
+    myInt operator++(int)
+    {
+        myInt temp = *this;
+        (this->my_int)++;
+        return temp;
+    }
 };
 
-void overload_increment()
+void prefix_increment()
 {
     // int a = 5;
     // int b = ++a;
@@ -34,10 +41,19 @@ void overload_increment()
     myInt b1 = ++a1;
     a1.print();
     b1.print();
+    cout << &a1 << "\t" << &b1 << "\n";
+}
+
+void postfix_increment()
+{
+    myInt a1(5);
+    myInt b1 = a1++;
+    a1.print();
+    b1.print();
 }
 
 int main()
 {
     // playing_with_polymorphism();
-    overload_increment();
+    postfix_increment();
 }
