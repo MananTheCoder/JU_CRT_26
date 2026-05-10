@@ -28,7 +28,8 @@ void print_vi(vi &v)
 
 void solve()
 {
-    // Code here
+    vi v1 = {1}, v2 = {1, 2}, v3 = {1, 2, 3};
+    vector<vi> matrix = {v1, v2, v3};
 }
 
 int main()

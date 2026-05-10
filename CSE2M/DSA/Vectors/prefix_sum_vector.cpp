@@ -26,9 +26,31 @@ void print_vi(vi &v)
     cout << "\n";
 }
 
+void get_prefix_sum(const vi &v, vi &prefix)
+{
+    int sum = 0;
+    // for (int i = 0; i < v.size(); i++)
+    forn(i, v.size())
+    {
+        sum += v[i];
+        prefix[i] = sum;
+    }
+}
+
+void prefix_sum_in_place(vi &v)
+{
+    for (int i = 1; i < v.size(); i++)
+    {
+        v[i] += v[i - 1];
+    }
+}
+
 void solve()
 {
-    // Code here
+    vi v = input_vi();
+    vi prefix(v.size());
+    get_prefix_sum(v, prefix);
+    print_vi(prefix);
 }
 
 int main()

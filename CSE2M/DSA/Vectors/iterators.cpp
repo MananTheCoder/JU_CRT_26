@@ -28,7 +28,14 @@ void print_vi(vi &v)
 
 void solve()
 {
-    // Code here
+    vector<int> v({3, 4, 5, 1, 2});
+    vector<int>::iterator itr;
+    // auto;
+    for (itr = v.begin(); itr != v.end(); itr++)
+    {
+        cout << (*itr) << "\t";
+    }
+    cout << '\n';
 }
 
 int main()

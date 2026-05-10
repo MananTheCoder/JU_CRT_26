@@ -28,7 +28,14 @@ void print_vi(vi &v)
 
 void solve()
 {
-    // Code here
+    vector<int> v;
+    // cout << v.size() << "\n";
+    cout << "Size\tCapacity\n";
+    forn(i, 50)
+    {
+        v.push_back(6);
+        cout << v.size() << "\t" << v.capacity() << '\n';
+    }
 }
 
 int main()
