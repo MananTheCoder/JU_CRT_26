@@ -35,7 +35,7 @@ bool isPrime_fastest(long n) // O(sqrt(n)/3)
     {
         return false;
     }
-    for (int i = 5; i * i <= n; i += 6) // O(sqrt(n)/6) * 2 = O(sqrt(n)/3)
+    for (int i = 5; i <= n / i; i += 6) // O(sqrt(n)/6) * 2 = O(sqrt(n)/3)
     {
         if (n % i == 0 || n % (i + 2) == 0) // O(1)*2
         {
